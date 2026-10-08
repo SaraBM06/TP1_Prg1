@@ -4,6 +4,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
     public float jumpForce = 6f;
+    
+     [HideInInspector] public float velocidadOriginal;
 
     private Rigidbody rb;
     private bool isGrounded;
@@ -11,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        velocidadOriginal = speed;
     }
 
     void Update()
