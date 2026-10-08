@@ -5,8 +5,15 @@ public class Spawner : MonoBehaviour
     public GameObject prefab;
     public float startDelay = 1f;
     public float interval = 2f;
+    public bool activarAlInicio = true;
 
     private bool activo = false;
+
+    void Start()
+    {
+        if (activarAlInicio)
+            Activar();
+    }
 
     public void Activar()
     {
